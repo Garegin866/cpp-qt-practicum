@@ -14,6 +14,19 @@
    <string>Close Button</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_exit">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>90</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>EXIT</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -21,7 +34,7 @@
      <x>0</x>
      <y>0</y>
      <width>374</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
