@@ -16,6 +16,9 @@ public:
     MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_pb_submit_clicked();
+
 private:
     Ui::MainWindow* ui;
 };
