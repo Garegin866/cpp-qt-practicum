@@ -27,15 +27,18 @@ MyWindowWithImage::~MyWindowWithImage()
     delete ui;
 }
 
-void MyWindowWithImage::SetPixmap(QLabel *label_pix, const QString path)
-{
-    // Тут нужно вызвать FitToImage.
-    // Подумайте, в каком месте метода это лучше сделать.
+void MyWindowWithImage::SetPixmap(QLabel *label_pix, const QString path) {
     QPixmap pix(path);
     Q_ASSERT(!pix.isNull());
 
     label_pix->setPixmap( pix );
+    FitToImage(label_pix);
     label_pix->show();
 }
 
-// Запишите здесь реализацию нового метода.
+void MyWindowWithImage::FitToImage(QLabel *label) {
+    auto size = label->pixmap().size();
+    label->move(0, 0);
+    this->setFixedSize(size);
+    label->setFixedSize(size);
+}
