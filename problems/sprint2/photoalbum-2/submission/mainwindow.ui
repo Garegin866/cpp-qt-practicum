@@ -78,6 +78,22 @@
    <string>Кошачий фотоальбом</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lbl_img">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Место для изображения</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
