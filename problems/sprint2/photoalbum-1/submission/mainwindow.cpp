@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    SetPixmap(/* подставьте сюда путь до ресурса */);
+    SetPixmap(":/cats/images/cat1.jpg");
     FitImage();
 }
 
@@ -34,11 +34,10 @@ void MainWindow::FitImage()
 {
     Q_ASSERT(!active_pixmap.isNull());
 
-    // Напишите этот метод.
-    // 1. Вызовите ResizeImgToFit.
-    // 2. Поместите изображение в lbl_img.
-    // 3. Измените размер lbl_img.
-    // 4. Переместите lbl_img, пользуясь формулами из условия.
+    auto img = ResizeImgToFit(active_pixmap, width(), height());
+    ui->lbl_img->setPixmap(img);
+    ui->lbl_img->setFixedSize(img.size());
+    ui->lbl_img->move((width() - img.width()) / 2, (height() - img.height()) / 2);
 }
 
 void MainWindow::resizeEvent(QResizeEvent*)
