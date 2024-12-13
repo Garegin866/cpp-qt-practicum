@@ -48,9 +48,15 @@ Selector::~Selector()
     delete ui;
 }
 
-void Selector::on_btn_cart_clicked()
-{
-    // Напишите этот метод.
+void Selector::on_btn_cart_clicked() {
+    auto cart_items = GetCartItems();
+    if (cart_items.empty()) {
+        AddItemsNotification dialog{this};
+        dialog.exec();
+    } else {
+        CartWindow cart_window{cart_items, this};
+        cart_window.exec();
+    }
 }
 
 std::vector<CartItem> Selector::GetCartItems() const {

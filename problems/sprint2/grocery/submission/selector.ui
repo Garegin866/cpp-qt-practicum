@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>672</width>
+    <width>743</width>
     <height>477</height>
    </rect>
   </property>
@@ -14,663 +14,677 @@
    <string>Лавка</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pb_drink">
-    <property name="geometry">
-     <rect>
-      <x>14</x>
-      <y>147</y>
-      <width>83</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Напитки</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pb_vegetable">
-    <property name="geometry">
-     <rect>
-      <x>14</x>
-      <y>103</y>
-      <width>74</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Овощи</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>23</x>
-      <y>23</y>
-      <width>64</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Добавить</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pb_fruit">
-    <property name="geometry">
-     <rect>
-      <x>14</x>
-      <y>59</y>
-      <width>78</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Фрукты</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_exit">
-    <property name="geometry">
-     <rect>
-      <x>231</x>
-      <y>370</y>
-      <width>70</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Выход</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_cart">
-    <property name="geometry">
-     <rect>
-      <x>134</x>
-      <y>370</y>
-      <width>83</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Корзина</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_clear">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>370</y>
-      <width>90</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Очистить</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_3">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Молоко</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_3">
-       <property name="text">
-        <string>110</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_3">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_8">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Манго</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_8">
-       <property name="text">
-        <string>400</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_8">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_10">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Вода</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_10">
-       <property name="text">
-        <string>45</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_10">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_12">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Бананы</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_12">
-       <property name="text">
-        <string>90</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_12">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_2">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Картофель</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_2">
-       <property name="text">
-        <string>60</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_2">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_9">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Лук</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_9">
-       <property name="text">
-        <string>15</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_9">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_11">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Огурцы</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_11">
-       <property name="text">
-        <string>135</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_11">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_14">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Кофе</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_14">
-       <property name="text">
-        <string>800</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_14">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_4">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Персики</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_4">
-       <property name="text">
-        <string>120</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_4">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_6">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Чай</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_6">
-       <property name="text">
-        <string>200</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_6">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_15">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Редис</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_15">
-       <property name="text">
-        <string>80</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_15">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_1">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Яблоки</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_1">
-       <property name="text">
-        <string>100</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_1">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_7">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Баклажаны</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_7">
-       <property name="text">
-        <string>150</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_7">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_5">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Морковь</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_5">
-       <property name="text">
-        <string>10</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_5">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="3,1,1">
-     <item>
-      <widget class="ClickableLabel" name="lbl_item_13">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Мандарины</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_cost_13">
-       <property name="text">
-        <string>100</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_q_13">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_125">
+      <property name="spacing">
+       <number>50</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Добавить</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pb_fruit">
+          <property name="text">
+           <string>Фрукты</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pb_vegetable">
+          <property name="text">
+           <string>Овощи</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pb_drink">
+          <property name="text">
+           <string>Напитки</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,0,0">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_7">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Баклажаны</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_7">
+            <property name="text">
+             <string>150</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_7">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="3,1,1">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_10">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Вода</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_10">
+            <property name="text">
+             <string>45</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_10">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="0,1,1">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_9">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Лук</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_9">
+            <property name="text">
+             <string>15</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_9">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="3,1,0">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_11">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Огурцы</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_11">
+            <property name="text">
+             <string>135</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_11">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_37" stretch="0,0,0">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Картофель</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_2">
+            <property name="text">
+             <string>60</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0,0">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Молоко</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_3">
+            <property name="text">
+             <string>110</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,1,1">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Морковь</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_5">
+            <property name="text">
+             <string>10</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_48" stretch="3,1,1">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_12">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Бананы</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_12">
+            <property name="text">
+             <string>90</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_12">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="3,1,1">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Персики</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_4">
+            <property name="text">
+             <string>120</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3,1,1">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Яблоки</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_1">
+            <property name="text">
+             <string>100</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="3,1,1">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Чай</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_6">
+            <property name="text">
+             <string>200</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="3,1,1">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Манго</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_8">
+            <property name="text">
+             <string>400</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="3,0,1">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_15">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Редис</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_15">
+            <property name="text">
+             <string>80</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_15">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="0,1,0">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_13">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Мандарины</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_13">
+            <property name="text">
+             <string>100</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_13">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="3,1,0">
+          <item>
+           <widget class="ClickableLabel" name="lbl_item_14">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Кофе</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_cost_14">
+            <property name="text">
+             <string>800</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_q_14">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_124">
+      <item>
+       <widget class="QPushButton" name="btn_clear">
+        <property name="text">
+         <string>Очистить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_cart">
+        <property name="text">
+         <string>Корзина</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_exit">
+        <property name="text">
+         <string>Выход</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
