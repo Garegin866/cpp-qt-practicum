@@ -7,6 +7,9 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+inline const QString kErrorInvalidDate = "Такой даты не существует";
+inline const QString kErrorInvalidInput = "Некорректная дата";
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -22,6 +25,7 @@ private:
     int CalculateDaysFromStartYear(int day, int month, int year);
 
     QString GetStrNumDays(int num_days, int year);
+    QString GetMonthStr(int month);
     void ShowFormattedDate();
     void SetError(const QString& err_text);
 

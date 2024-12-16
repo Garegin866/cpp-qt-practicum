@@ -24,6 +24,9 @@
     </item>
     <item>
      <widget class="QLineEdit" name="le_date">
+      <property name="inputMask">
+       <string>00.00.0000</string>
+      </property>
       <property name="placeholderText">
        <string>00.00.0000</string>
       </property>
@@ -126,7 +129,7 @@
     <item>
      <spacer name="verticalSpacer">
       <property name="orientation">
-       <enum>Qt::Vertical</enum>
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
       <property name="sizeHint" stdset="0">
        <size>

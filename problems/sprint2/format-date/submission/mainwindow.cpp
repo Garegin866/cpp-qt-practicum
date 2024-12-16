@@ -19,7 +19,7 @@ int DaysPerMonth(int month, int year)
     }
 }
 
-int CalculateDaysFromStartYear(int day, int month, int year)
+int MainWindow::CalculateDaysFromStartYear(int day, int month, int year)
 {
     if(month == 0) {
         return 0;
@@ -34,21 +34,61 @@ int CalculateDaysFromStartYear(int day, int month, int year)
 
 QString MainWindow::GetFormatType1(int day, int month, int year)
 {
-    // Реализуйте метод форматирования даты.
+    return QString("%1.%2.%3").arg(day, 2, 10, QChar('0'))
+                              .arg(month, 2, 10, QChar('0'))
+                              .arg(year);
 }
 
 QString MainWindow::GetFormatType2(int day, int month, int year)
 {
-    // Реализуйте метод форматирования даты.
+    return QString("%1/%2/%3").arg(month, 2, 10, QChar('0'))
+                              .arg(day, 2, 10, QChar('0'))
+                              .arg(year);
 }
 
 QString MainWindow::GetFormatType3(int day, int month, int year)
 {
-    // Реализуйте метод форматирования даты.
+    return QString("%1 %2 %3 года").arg(day, 2, 10, QChar('0'))
+                                  .arg(GetMonthStr(month))
+                                  .arg(year);
 }
 
 QString MainWindow::GetStrNumDays(int num_days, int year) {
-    // Метод должен возвращать текст о номере дня в году.
+    return QString("Это %1 день в %2 году")
+        .arg(num_days)
+        .arg(year);
+}
+
+QString MainWindow::GetMonthStr(int month)
+{
+    switch (month) {
+        case 1:
+            return "января";
+        case 2:
+            return "февраля";
+        case 3:
+            return "марта";
+        case 4:
+            return "апреля";
+        case 5:
+            return "мая";
+        case 6:
+            return "июня";
+        case 7:
+            return "июля";
+        case 8:
+            return "августа";
+        case 9:
+            return "сентября";
+        case 10:
+            return "октября";
+        case 11:
+            return "ноября";
+        case 12:
+            return "декабря";
+        default:
+            return "неверный месяц";
+        }
 }
 
 MainWindow::MainWindow(QWidget *parent)
@@ -57,9 +97,12 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Установите валидаторы.
+    ui->le_day->setValidator(new QIntValidator(1, 31, this));
+    ui->le_month->setValidator(new QIntValidator(1, 12, this));
+    ui->le_year->setValidator(new QIntValidator(1, 9999, this));
 
-    SetError("Некорректная дата");
+
+    SetError(kErrorInvalidInput);
 }
 
 MainWindow::~MainWindow()
@@ -72,18 +115,32 @@ void MainWindow::ShowFormattedDate()
     if(!ui->le_day->hasAcceptableInput() ||
         !ui->le_month->hasAcceptableInput() ||
         !ui->le_year->hasAcceptableInput() ) {
-        SetError("Некорректная дата");
+        SetError(kErrorInvalidInput);
 
         return;
     }
 
-    // Отобразим результаты.
-    // Используйте DaysPerMonth для определения количества дней в месяце.
-    // Используйте CalculateDaysFromStartYear для определения номера дня в году.
+    auto day = ui->le_day->text().toInt();
+    auto month = ui->le_month->text().toInt();
+    auto year = ui->le_year->text().toInt();
 
-    // Используйте GetFormatType1, GetFormatType2, GetFormatType3 и GetStrNumDays
-    // для определения надписей, которые нужно вывести пользователю.
-    // Эти методы реализуйте самостоятельно.
+    if (day > DaysPerMonth(month, year)) {
+        SetError(kErrorInvalidDate);
+        return;
+    }
+
+    if (!editing_now_) {
+        editing_now_ = true;
+        ui->le_date->setText(GetFormatType1(day, month, year));
+        editing_now_ = false;
+    }
+
+    ui->lbl_format_type1->setText(GetFormatType1(day, month, year));
+    ui->lbl_format_type2->setText(GetFormatType2(day, month, year));
+    ui->lbl_format_type3->setText(GetFormatType3(day, month, year));
+
+    auto num_days = CalculateDaysFromStartYear(day, month, year);
+    ui->lbl_message->setText(GetStrNumDays(num_days, year));
 }
 
 void MainWindow::SetError(const QString& err_text)
@@ -96,20 +153,37 @@ void MainWindow::SetError(const QString& err_text)
 
 void MainWindow::on_le_date_textChanged(const QString&)
 {
-    // Пользователь изменил дату. Реализуйте слот.
+    if (editing_now_) {
+        return;
+    }
+
+    auto date = ui->le_date->text();
+    auto date_parts = date.split(QRegularExpression("[/. ]"));
+    if (date_parts.size() != 3) {
+        SetError(kErrorInvalidInput);
+        return;
+    }
+
+    editing_now_ = true;
+
+    ui->le_day->setText(date_parts[0]);
+    ui->le_month->setText(date_parts[1]);
+    ui->le_year->setText(date_parts[2]);
+
+    editing_now_ = false;
 }
 
 void MainWindow::on_le_day_textChanged(const QString&)
 {
-    // Пользователь изменил день. Реализуйте слот.
+    ShowFormattedDate();
 }
 
 void MainWindow::on_le_month_textChanged(const QString&)
 {
-    // Пользователь изменил месяц. Реализуйте слот.
+    ShowFormattedDate();
 }
 
 void MainWindow::on_le_year_textChanged(const QString&)
 {
-    // Пользователь изменил год. Реализуйте слот.
+    ShowFormattedDate();
 }
