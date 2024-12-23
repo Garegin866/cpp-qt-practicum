@@ -30,7 +30,8 @@ void WinterWindow::paintEvent(QPaintEvent *event) {
         .rotation = double(ui->sld_rotation->value())
     };
 
-    // Создайте снежинку (объект класса SnowFlake) и нарисуйте её методом Draw.
+    SnowFlake flake{flake_params};
+    flake.Draw(painter);
 
     QRect rect(10, 10, width() - 20, height() - 20);
 
@@ -38,8 +39,8 @@ void WinterWindow::paintEvent(QPaintEvent *event) {
     painter.setFont(font);
     painter.setPen(Qt::white);
 
-    // Получите описание снежинки из метода GetDescription,
-    // напечатайте этот текст в прямоугольнике rect.
+    QString description = flake.GetDescription();
+    painter.drawText(rect, Qt::AlignLeft, description);
 }
 
 void WinterWindow::on_btn_color_clicked()
