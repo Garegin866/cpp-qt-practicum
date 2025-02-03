@@ -117,9 +117,9 @@ void MainWindow::on_btn_ms_clicked()
 void MainWindow::on_btn_mr_clicked()
 {
     if (memory_saved_) {
-        input_number_ = QString::number(memory_cell_);
+        input_number_ = "";
         active_number_ = memory_cell_;
-        ui->l_result->setText(input_number_);
+        ui->l_result->setText(QString::number(memory_cell_));
     }
 }
 
@@ -142,6 +142,10 @@ void MainWindow::on_btn_c_clicked()
 
 void MainWindow::on_btn_plus_minus_clicked()
 {
+    if (input_number_.isEmpty() && current_operation_ == Operation::NO_OPERATION) {
+        return;
+    }
+
     active_number_ *= -1;
     input_number_ = QString::number(active_number_);
     ui->l_result->setText(input_number_);
@@ -149,7 +153,7 @@ void MainWindow::on_btn_plus_minus_clicked()
 
 void MainWindow::on_btn_del_clicked()
 {
-    if (input_number_.length() > 0) {
+    if (!input_number_.isEmpty())  {
         input_number_ = input_number_.left(input_number_.length() - 1);
         active_number_ = input_number_.toDouble();
         ui->l_result->setText(input_number_);
@@ -158,6 +162,15 @@ void MainWindow::on_btn_del_clicked()
 
 void MainWindow::on_btn_dot_clicked()
 {
+    if (input_number_.isEmpty()) {
+        if (current_operation_ != Operation::NO_OPERATION) {
+            return;
+        }
+        input_number_ = "0";
+        ui->l_result->setText(input_number_);
+        ui->l_formula->setText("");
+    }
+
     if (!input_number_.contains(kDot)) {
         input_number_ += kDot;
         ui->l_result->setText(input_number_);
@@ -176,24 +189,24 @@ void MainWindow::ProcessNumber(Number n) {
 
 void MainWindow::Calculate() {
     switch (current_operation_) {
-        case Operation::ADDITION:
-            calculator_.Add(active_number_);
-            break;
-        case Operation::SUBTRACTION:
-            calculator_.Sub(active_number_);
-            break;
-        case Operation::MULTIPLICATION:
-            calculator_.Mul(active_number_);
-            break;
-        case Operation::DIVISION:
-            calculator_.Div(active_number_);
-            break;
-        case Operation::POWER:
-            calculator_.Pow(active_number_);
-            break;
-        default:
-            calculator_.Set(active_number_);
-            break;
+    case Operation::ADDITION:
+        calculator_.Add(active_number_);
+        break;
+    case Operation::SUBTRACTION:
+        calculator_.Sub(active_number_);
+        break;
+    case Operation::MULTIPLICATION:
+        calculator_.Mul(active_number_);
+        break;
+    case Operation::DIVISION:
+        calculator_.Div(active_number_);
+        break;
+    case Operation::POWER:
+        calculator_.Pow(active_number_);
+        break;
+    default:
+        calculator_.Set(active_number_);
+        break;
     }
 }
 
@@ -209,18 +222,18 @@ void MainWindow::ProcessOperation(Operation operation) {
 
 QString MainWindow::GetOperationSymbol(Operation operation) {
     switch (operation) {
-        case Operation::ADDITION:
-            return "+";
-        case Operation::SUBTRACTION:
-            return "−";
-        case Operation::MULTIPLICATION:
-            return "×";
-        case Operation::DIVISION:
-            return "÷";
-        case Operation::POWER:
-            return "^";
-        default:
-            return "";
+    case Operation::ADDITION:
+        return "+";
+    case Operation::SUBTRACTION:
+        return "−";
+    case Operation::MULTIPLICATION:
+        return "×";
+    case Operation::DIVISION:
+        return "÷";
+    case Operation::POWER:
+        return "^";
+    default:
+        return "";
     }
 }
 

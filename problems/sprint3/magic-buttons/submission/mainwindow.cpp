@@ -21,9 +21,9 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::slotShowAction(int num, QString action_name, std::function<void()> action) {
-    // Сохраните действие, которое будет делать кнопка с номером num.
-    // Действие находится в функциональном объекте action.
-    // Поменяйте надпись на кнопке: установите текст action_name.
+    buttons_[num]->setText(action_name);
+    buttons_[num]->disconnect();
+    connect(buttons_[num], &QPushButton::clicked, action);
 }
 
 void MainWindow::on_pb_sett_1_clicked()
