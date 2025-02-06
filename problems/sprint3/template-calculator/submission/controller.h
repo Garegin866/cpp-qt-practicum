@@ -67,19 +67,19 @@ private:
 
     void ProcessOperationKey(Operation operation) {
         switch(operation) {
-        case Operation::PLUS:
+        case Operation::ADDITION:
             OnOperation([this](Number x){return calculator_.Add(x);}, " + ");
             break;
-        case Operation::MINUS:
+        case Operation::SUBTRACTION:
             OnOperation([this](Number x){return calculator_.Sub(x);}, " − ");
             break;
-        case Operation::MULTIPLY:
+        case Operation::MULTIPLICATION:
             OnOperation([this](Number x){return calculator_.Mul(x);}, " × ");
             break;
-        case Operation::DIV:
+        case Operation::DIVISION:
             OnOperation([this](Number x){return calculator_.Div(x);}, " ÷ ");
             break;
-        case Operation::EXP:
+        case Operation::POWER:
             OnOperation([this](Number x){return calculator_.Pow(x);}, " ^ ");
             break;
         }

@@ -20,7 +20,9 @@ HEADERS += \
     calculator.h \
     controller.h \
     mainwindow.h \
-    rational.h
+    rational.h \
+    pow.h \
+    enums.h
 
 FORMS += \
     mainwindow.ui
