@@ -54,10 +54,12 @@ void MainWindow::ApplyIterator() {
 }
 
 void MainWindow::on_pb_pop_back_clicked() {
-    vector_model_.items.pop_back();
-    vector_model_.iterator = vector_model_.items.begin();
+    if (!vector_model_.items.empty()) {
+        vector_model_.items.pop_back();
+        vector_model_.iterator = vector_model_.items.begin();
 
-    ApplyModel();
+        ApplyModel();
+    }
 }
 
 void MainWindow::on_pb_push_back_clicked() {
@@ -144,7 +146,9 @@ void MainWindow::on_pb_edit_clicked() {
 }
 
 void MainWindow::on_list_widget_currentRowChanged(int currentRow) {
-    vector_model_.iterator = vector_model_.items.begin() + currentRow;
+    if (currentRow >= 0 && currentRow <= vector_model_.items.size()) {
+        vector_model_.iterator = vector_model_.items.begin() + currentRow;
 
-    ApplyIterator();
+        ApplyIterator();
+    }
 }
