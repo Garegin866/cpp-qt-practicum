@@ -122,18 +122,53 @@
              </widget>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_8">
-              <item>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="1">
+               <widget class="QPushButton" name="pb_max_element">
+                <property name="text">
+                 <string>max_element</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="pb_reverse">
+                <property name="text">
+                 <string>reverse</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pb_sort">
+                <property name="text">
+                 <string>sort</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
                <widget class="QPushButton" name="pb_min_element">
                 <property name="text">
                  <string>min_element</string>
                 </property>
                </widget>
               </item>
-              <item>
-               <widget class="QPushButton" name="pb_max_element">
+              <item row="2" column="0">
+               <widget class="QPushButton" name="pb_unique">
                 <property name="text">
-                 <string>max_element</string>
+                 <string>unique</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="pb_sort_2">
+                <property name="text">
+                 <string>sOrT</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="pb_shuffle">
+                <property name="text">
+                 <string>shuffle</string>
                 </property>
                </widget>
               </item>

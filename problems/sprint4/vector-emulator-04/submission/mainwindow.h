@@ -1,8 +1,10 @@
 #pragma once
 
+#include <QListWidgetItem>
 #include <QMainWindow>
 #include <QStringListModel>
-#include <QListWidgetItem>
+
+#include <random>
 
 #include "model.h"
 
@@ -17,6 +19,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void SetRandomGen(const std::mt19937& random_gen);
 private slots:
     void on_pb_pop_back_clicked();
     void on_pb_push_back_clicked();
@@ -40,6 +43,12 @@ private slots:
     void on_pb_max_element_clicked();
     void on_pb_count_clicked();
 
+    void on_pb_unique_clicked();
+    void on_pb_sort_clicked();
+    void on_pb_sort_2_clicked();
+    void on_pb_reverse_clicked();
+    void on_pb_shuffle_clicked();
+
 private:
     void ApplyModel();
     void ApplyIterator();
@@ -47,4 +56,6 @@ private:
 private:
     Model vector_model_;
     Ui::MainWindow *ui;
+
+    std::mt19937 random_gen_;
 };

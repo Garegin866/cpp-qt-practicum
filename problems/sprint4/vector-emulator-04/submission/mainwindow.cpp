@@ -8,7 +8,8 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow) {
+    , ui(new Ui::MainWindow)
+    , random_gen_(std::random_device()()){
     ui->setupUi(this);
 
     ui->lbl_count->setText("0");
@@ -18,6 +19,10 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow() {
     delete ui;
+}
+
+void MainWindow::SetRandomGen(const std::mt19937 &random_gen) {
+    random_gen_ = random_gen;
 }
 
 void MainWindow::ApplyModel() {
@@ -202,4 +207,39 @@ void MainWindow::on_pb_count_clicked() {
     }
 
     ui->lbl_count->setText(QString::number(count));
+}
+
+void MainWindow::on_pb_unique_clicked() {
+    if (std::is_sorted(vector_model_.items.begin(), vector_model_.items.end())) {
+        auto new_end = std::unique(vector_model_.items.begin(), vector_model_.items.end());
+        vector_model_.items.erase(new_end, vector_model_.items.end());
+
+        vector_model_.iterator = vector_model_.items.begin();
+        ApplyModel();
+    }
+}
+
+void MainWindow::on_pb_sort_clicked() {
+    std::sort(vector_model_.items.begin(), vector_model_.items.end());
+    ApplyModel();
+}
+
+void MainWindow::on_pb_sort_2_clicked() {
+    std::sort(vector_model_.items.begin(), vector_model_.items.end(), [](const std::string& lhs, const std::string& rhs) {
+        return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end(), [](char a, char b) {
+            return std::tolower(a) < std::tolower(b);
+        });
+    });
+
+    ApplyModel();
+}
+
+void MainWindow::on_pb_reverse_clicked() {
+    std::reverse(vector_model_.items.begin(), vector_model_.items.end());
+    ApplyModel();
+}
+
+void MainWindow::on_pb_shuffle_clicked() {
+    std::shuffle(vector_model_.items.begin(), vector_model_.items.end(), random_gen_);
+    ApplyModel();
 }
