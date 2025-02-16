@@ -45,8 +45,8 @@ void MainWindow::ApplyModel() {
 
     ApplyIterator();
 }
-\
-    void MainWindow::ApplyIterator() {
+
+void MainWindow::ApplyIterator() {
     int iterator_offset = std::distance(vector_model_.items.begin(), vector_model_.iterator);
     ui->list_widget->setCurrentRow(iterator_offset);
 
