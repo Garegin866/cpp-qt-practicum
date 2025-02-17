@@ -15,20 +15,54 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::on_pb_add_clicked() {
-    // Получите данные о фильме методом GetMovie().
-    // Если фильм уже есть в списке, то отредактируйте его.
-    // Если нет — добавьте в список.
-    // После изменения списка вызовите ApplyModel.
-    // После этого можно вызвать ApplyMovie, чтобы
-    // данные не сбивались.
+    auto movie = GetMovie();
+    if (movie.name.isEmpty()) {
+        return;
+    }
+
+    auto it = std::find(movies_.begin(), movies_.end(), movie);
+
+    if (it != movies_.end()) {
+        *it = movie;
+    } else {
+        movies_.push_back(movie);
+    }
+
+    ApplyModel(movie);
+    ApplyMovie(movie);
 }
 
 void MainWindow::ApplyModel(const Movie &selection) {
-    // Заполните виджеты ui->cb_list_done и ui->cb_list_wait,
-    // используя их методы clear и addItems.
-    // Вам пригодится метод ToString.
-    // Также примените выделение, используя метод 
-    // setCurrentIndex.
+    QStringList done;
+    QStringList wait;
+
+    for (const auto& movie : movies_) {
+        if (movie.is_watched) {
+            done.push_back(ToString(movie));
+        } else {
+            wait.push_back(ToString(movie));
+        }
+    }
+
+    ui->cb_list_done->clear();
+    ui->cb_list_done->addItems(done);
+
+    ui->cb_list_wait->clear();
+    ui->cb_list_wait->addItems(wait);
+
+    int index = -1;
+    if (selection.is_watched) {
+        index = done.indexOf(ToString(selection));
+        ui->cb_list_done->setCurrentIndex(index);
+    } else {
+        index = wait.indexOf(ToString(selection));
+        ui->cb_list_wait->setCurrentIndex(index);
+    }
+
+    if (index == -1) {
+        ui->cb_list_done->setCurrentIndex(-1);
+        ui->cb_list_wait->setCurrentIndex(-1);
+    }
 }
 
 QString MainWindow::ToString(const Movie &movie) {
@@ -45,7 +79,11 @@ QString MainWindow::ToString(const Movie &movie) {
 }
 
 QStringList MainWindow::ToString(const QList<Movie> &movies) {
-    // Напишите этот метод. Используйте ToString.
+    QStringList result;
+    for (const auto& movie : movies) {
+        result.push_back(ToString(movie));
+    }
+    return result;
 }
 
 Movie MainWindow::GetMovie() const {
@@ -63,11 +101,19 @@ void MainWindow::ApplyMovie(const Movie &movie) {
 }
 
 void MainWindow::on_cb_list_wait_currentIndexChanged(int index) {
-    // Если index неотрицательный, заполните интерфейс,
-    // используя ApplyMovie.
+    if (index < 0) {
+        return;
+    }
+
+    auto movie = movies_[index];
+    ApplyMovie(movie);
 }
 
 void MainWindow::on_cb_list_done_currentIndexChanged(int index) {
-    // Если index неотрицательный, заполните интерфейс,
-    // используя ApplyMovie.
+    if (index < 0) {
+        return;
+    }
+
+    auto movie = movies_[index];
+    ApplyMovie(movie);
 }
