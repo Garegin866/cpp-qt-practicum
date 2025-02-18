@@ -28,8 +28,9 @@ private slots:
     void on_btn_no_clicked();
 
 private:
-    // Разместите тут переменные, использующиеся в бинарном поиске:
-    // a_, b_, m_.
+    int a_{0};
+    int b_{0};
+    int m_{0};
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

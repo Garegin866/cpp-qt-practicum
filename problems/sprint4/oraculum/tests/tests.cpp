@@ -81,15 +81,20 @@ TestYourApp::STATE TestYourApp::getState() const
 {
     const std::string lbl_question_text = lbl_question->text().toStdString();
 
+    qDebug() << lbl_question_text.c_str();
     if(std::regex_match(lbl_question_text, bigger_regex)) {
+        qDebug() << "bigger";
         return IS_BIGGER;
     }
     if(std::regex_match(lbl_question_text, smaller_regex)) {
+        qDebug() << "smaller";
         return IS_SMALLER;
     }
     if(std::regex_match(lbl_question_text, finish_regex)) {
+        qDebug() << "finish";
         return FINISH;
     }
+    qDebug() << "error";
     return ERROR;
 }
 
@@ -133,6 +138,9 @@ void TestYourApp::runPipeline(const int desired_number) const
         }
         // Redundant if, just to be sure
         else if(current_state == FINISH) {
+            qDebug() << "FINISH";
+            qDebug() << "current_number: " << current_number;
+            qDebug() << "desired_number: " << desired_number;
             QCOMPARE(current_number, desired_number);
             return;
         }
