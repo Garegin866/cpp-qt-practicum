@@ -306,6 +306,8 @@ void TestYourApp::checkExpectedDeque() const {
     for (size_t i = 0; i < deq.size(); ++i) {
         const QString expected_string = QString("%1: %2").arg(i).arg(deq.at(i));
         const auto& actual_string = actual_vector.at(i);
+        qDebug() << "Expected: " << expected_string;
+        qDebug() << "Actual: " << actual_string;
         QVERIFY2(expected_string == actual_string, "Строка вектора не совпадает с ожидаемой");
     }
 }
@@ -758,15 +760,21 @@ void TestYourApp::TestErase() {
 
 void TestYourApp::TestInsert() {
     pushBackLines(default_lines);
+    qDebug() << "currentIndex" << list_widget->currentIndex().row();
+    qDebug() << "currentIndex" << list_widget->currentItem()->text();
     setCurrentElement(3);
+    qDebug() << "currentIndex" << list_widget->currentIndex().row();
+    qDebug() << "currentIndex" << list_widget->currentItem()->text();
     insert("New string");
     checkModel();
     setCurrentElement(3);
     insert("New new string");
+    qDebug() << deq.size();
     checkModel();
 
     setCurrentElement(static_cast<int>(deq.size()));
     insert("New string at the end");
+    qDebug() << deq.size();
     checkModel();
 }
 
